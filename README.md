@@ -4,9 +4,8 @@
 |Column｜Type|Option|  
 |-------|----|------|  
 |email|strings|null: fales|  
-
 |password|strings|null: fales|  
-|user|strings|null: fales|  
+|name|strings|null: fales|  
 ### Association  
 - has_many :massages  
 
