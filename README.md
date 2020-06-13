@@ -14,7 +14,7 @@
 ## groups_usersテーブル  
 |Column|Type|Option|  
 |------|-----|------|  
-|user_id|integer|null: fales, foreign_key:  
+|user_id|integer|null: fales, foreign_key: true|  
 |group_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :user  
