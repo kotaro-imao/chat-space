@@ -9,7 +9,7 @@
 ### Association  
 - has_many :messages  
 
-## groupoes_usersテーブル  
+## groups_usersテーブル  
 |Column｜Type|Option|  
 |------|-----|------|  
 |user_id|integer|null: fales, foreign_key: true|  
@@ -18,22 +18,22 @@
 - belongs_to :user  
 - belongs_to :groupe  
 
-## massagesテーブル  
-|Column｜Type|Option|  
+## messagesテーブル  
+|Column|Type|Option|  
 |------|-----|------|  
 |body|text|null: fales|  
 |image|strings||  
-|groupe_id|integer|null: fales, foreign_key: true|  
+|group_id|integer|null: fales, foreign_key: true|  
 |user_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :user  
 - belongs_to :groupe  
 
-## groupesテーブル  
+## groupsテーブル  
 |Column｜Type|Option|  
 |-------|----|------|  
-|groupe|strings|null: fales|  
+|group|strings|null: fales|  
 |user_id|integer|null: fales|  
 ### Association   
-- has_many :groupes_users  
-- has_many :users  , through: groupes_users  
+- has_many :groups_users  
+- has_many :users  , through: groups_users  
