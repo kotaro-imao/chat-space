@@ -1,6 +1,6 @@
 # Chat-SpaceDB設計
 
-## userテーブル  
+## usersテーブル  
 |Column｜Type|Option|  
 |-------|----|------|  
 |email|strings|null: fales|  
@@ -13,17 +13,27 @@
 |Column｜Type|Option|  
 |------|-----|------|  
 |user_id|integer|null: fales, foreign_key: true|  
-|groupes_id|integer|null: fales, foreign_key: true|  
+|groupe_id|integer|null: fales, foreign_key: true|  
 ### Association  
-- has_many :comments  
+- belongs_to :user  
+- belongs_to :groupe
 
-## massageテーブル  
+## massagesテーブル  
 |Column｜Type|Option|  
 |------|-----|------|  
 |body|text|null: fales|  
-|image|string|null: fales|  
-|time|integer|null: fales|  
+|image|text||  
 |groupe_id|integer|null: fales, foreign_key: true|  
 |user_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :user  
+- belongs_to :groupe
+
+## groupesテーブル
+|Column｜Type|Option|  
+|-------|----|------|  
+|groupe|strings|null: fales|  
+|user_id|integer|null: fales|  
+### Association   
+- has_many :groupes_users  
+- has_many :users  , through: groupes_users
