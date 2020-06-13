@@ -16,24 +16,24 @@
 |groupe_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :user  
-- belongs_to :groupe
+- belongs_to :groupe  
 
 ## massagesテーブル  
 |Column｜Type|Option|  
 |------|-----|------|  
 |body|text|null: fales|  
-|image|text||  
+|image|strings||  
 |groupe_id|integer|null: fales, foreign_key: true|  
 |user_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :user  
-- belongs_to :groupe
+- belongs_to :groupe  
 
-## groupesテーブル
+## groupesテーブル  
 |Column｜Type|Option|  
 |-------|----|------|  
 |groupe|strings|null: fales|  
 |user_id|integer|null: fales|  
 ### Association   
 - has_many :groupes_users  
-- has_many :users  , through: groupes_users
+- has_many :users  , through: groupes_users  
