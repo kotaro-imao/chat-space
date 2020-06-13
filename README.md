@@ -26,14 +26,15 @@
 |body|text||  
 |image|string||  
 |group_id|integer|null: fales, foreign_key: true|  
+|user_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :group  
+- belongs_to :user  
 
 ## groupsテーブル  
 |Column|Type|Option|  
 |-------|----|------|  
-|group|string|null: fales|  
-|user_id|integer|null: fales|  
+|name|string|null: fales|  
 ### Association   
 - has_many :groups_users  
 - has_many :users, through: :groups_users  
