@@ -15,10 +15,10 @@
 |Column|Type|Option|  
 |------|-----|------|  
 |user_id|integer|null: fales, foreign_key: true|  
-|groupe_id|integer|null: fales, foreign_key: true|  
+|group_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :user  
-- belongs_to :groupe  
+- belongs_to :group  
 
 ## messagesテーブル  
 |Column|Type|Option|  
@@ -29,7 +29,7 @@
 |user_id|integer|null: fales, foreign_key: true|  
 ### Association  
 - belongs_to :user  
-- belongs_to :groupe  
+- belongs_to :group  
 
 ## groupsテーブル  
 |Column|Type|Option|  
