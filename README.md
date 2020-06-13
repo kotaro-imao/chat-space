@@ -1,13 +1,13 @@
 # Chat-SpaceDB設計
 
 ## usersテーブル  
-|Column｜Type|Option|  
-|-------|----|------|  
-|email|strings|null: fales|  
-|password|strings|null: fales|  
-|name|strings|null: fales|  
+|Column|Type|Option|
+|-------|----|------|
+|email|strings|null: fales|
+|password|strings|null: fales|
+|name|strings|null: fales|
 ### Association  
-- has_many :massages  
+- has_many :messages  
 
 ## groupoes_usersテーブル  
 |Column｜Type|Option|  
