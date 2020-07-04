@@ -1,0 +1,41 @@
+.Main_chat
+
+  .RightHeader
+    .RightHeader__Box
+      .RightHeader__Member
+        test
+        %ul.RightHeader__List
+          Member :
+          %li.RightHeader__name
+            name
+    = link_to "#", class: "RightHeader__Edit-btn" do
+      Edit
+
+  .MessageField
+    .MessageList
+    .MessageIndex
+
+      .MessageIndex__userName
+        kou
+      .MessageIndex__date
+        2020/06/22(Mon) 07:30:44
+    .message
+      おはよう!
+    .message-index
+      .author
+        kou
+      .date
+        2020/06/24(Wed) 09:06:32
+    .message
+      こんにちは!
+
+  .Footer
+    %form.Form
+      .Form__Box
+      %input.Form__inputMessage{type: 'text', placeholder: 'type a message'}
+      %label.Form__inputImage
+        = icon('far', 'image', class: 'Form__icon')
+        %input.Hidden{type: 'file', class: 'input-box__image__file'}
+
+    %input.Form__send-btn{type: 'summit', value: 'Send'}
+

@@ -1,0 +1,20 @@
+.SideBar
+  .TopItem
+    .TopItem__list
+      %h3.TopItem__Name
+        KOU
+      %ul.TopItem__iconList
+        %li.TopItem__Icon
+          = link_to "#", class:"TopItem__icon" do
+            = icon('fas', 'edit')
+        %li.TopItem__Icon
+          = link_to '#', class:"TopItem__Icon" do
+            = icon('fas', 'cog')
+
+  .Group
+    .Group__list
+      = link_to '#', class:"Group__list" do
+        .Group__name
+          techcamp
+        .Group__massage
+          まだメッセージがありません
