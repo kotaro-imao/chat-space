@@ -5,7 +5,7 @@
         = current_user.name
       %ul.TopItem__iconList
         %li.TopItem__Icon
-          = link_to "#", class:"TopItem__icon" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
         %li.TopItem__Icon
           = link_to edit_user_path(current_user) do
@@ -13,8 +13,9 @@
 
   .Group
     .Group__list
+    - current_user.groups.each do |group|
       = link_to '#', class:"Group__list" do
         .Group__name
-          techcamp
+          = group.name
         .Group__massage
           まだメッセージがありません
