@@ -29,13 +29,13 @@
     .message
       こんにちは!
 
-  .Footer
-    %form.Form
-      .Form__Box
-      %input.Form__inputMessage{type: 'text', placeholder: 'type a message'}
-      %label.Form__inputImage
-        = icon('far', 'image', class: 'Form__icon')
-        %input.Hidden{type: 'file', class: 'input-box__image__file'}
-
-    %input.Form__send-btn{type: 'summit', value: 'Send'}
+  .Form
+    = form_for [@group, @message] do |f|
+      .Form-box
+        = f.text_field :content, class: 'Form__inputMessage', placeholder: 'type a message'
+        .Form__inputImages
+          = f.label :image, class: 'Form__inputImage' do
+            = icon('far', 'image', class: 'Form__icon')
+            = f.file_field :image, class: 'Hidden'
+      = f.submit 'Send', class: 'Form__send-btn'
 

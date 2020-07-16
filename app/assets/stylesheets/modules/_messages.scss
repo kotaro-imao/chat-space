@@ -52,7 +52,7 @@
     text-decoration: none;
   }
   &__.list {
-      olor: #ffffff;
+      color: #ffffff;
     font-weight: bold;
     text-decoration: none;
     &__.name {
@@ -137,52 +137,55 @@
   margin-bottom: 46px;
 }
 
-.Footer {
-  height: 90px;
-  background-color: #d2d2d2;
-  padding: 20px 40px 20px 50px;
-  display: flex;
-  box-sizing: border-box;
-}
 .Form {
-  width: 100%;
+  background-color: #dddddd;
   box-sizing: border-box;
-  display: flex;
-  position: relative;
-}
-.Form__Box {
-  background-color: #ffffff;     
-  position: relative;   
-}
-.Form__inputMessage {
-  width: 100%;
-  padding: 0 45px 0 14px;
-  font-size: 16px;
-  color: #999999;
-  float: left;
-}
-.Form__inputImage {
-  height: 40px;
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  .Form__icon {
-    width: 40px;
-    line-height: 40px;
-    font-size: 25px;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+
+
+  .new_message {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .Form-box {
+      width: 100%;
+      position: relative;
+      .Form__inputMessage {
+        width: 100%;
+        background-color: #ffffff;
+        height: 50px;
+        padding: 0 35px 0 10px;
+        font-size: 16px;
+        color: #999999;
+      }
+      .Form__inputImages {
+        height: 30px;
+        position: absolute;
+        right: 2px;
+        top: 7px;
+      }
+          .Form__icon {
+          width: 40px;
+          line-height: 40px;
+          font-size: 25px;
+          }
+    }
+    .Form__send-btn {
+      background-color: #38aef0;
+      width: 100px;
+      margin-left: 15px;
+      font-size: 16px;
+      line-height: 50px;
+      padding: 0 30px;
+      color: #ffffff;
+      text-decoration: none;
+      border: none;
+    }
+    .Hidden {
+      display: none;
+    }
   }
-}
-.Form__send-btn {
-  background-color: #38aef0;
-  width: 100px;
-  margin-left: 15px;
-  font-size: 16px;
-  line-height: 50px;
-  padding: 0 30px;
-  color: #ffffff;
-  text-decoration: none;
-  border: none;
-}
-.Hidden {
-  display: none;
 }
