@@ -2,16 +2,18 @@
 
   .RightHeader
     .RightHeader__Box
-      .RightHeader__Member
-        test
+      .RightHeader__Group
+        = @group.name
         %ul.RightHeader__List
           Member :
           %li.RightHeader__name
-            name
-    = link_to "#", class: "RightHeader__Edit-btn" do
-      Edit
+            - @group.users.each do |user|
+              = user.name
+
+    = link_to 'Edit', edit_group_path(@group.id), class: "RightHeader__Edit-btn" 
 
   .MessageField
+  
     = render @messages
 
   .Form
