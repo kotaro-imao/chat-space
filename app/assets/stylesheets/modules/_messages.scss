@@ -114,13 +114,16 @@
   height: calc(100vh - 100px - 90px);
   padding: 35px 40px 0px;
   background-color: #fafafa;
+  overflow: scroll;
 }
-.MessageList {
+.message {
+  box-sizing: border-box;
 }
-.MessageIndex {
+.upper-message {
   display: flex;
-  &__userName {
+  &__user-name {
     font-size: 16px;
+    font-weight: bold;
     color: #333333;
     text-align: center;
     margin-right: 5px;
@@ -129,12 +132,23 @@
   &__date {
     font-size: 12px;
     color: #999999;
+    margin-left: 12px;
   }
 }    
-.message {
-  font-size: 14px;
-  color: #434A54;
-  margin-bottom: 46px;
+.lower-message {
+  box-sizing: border-box;
+  padding-bottom: 40px;
+  display: block;
+  &__content {
+    font-size: 14px;
+    color: #434A54;
+    margin-bottom: 10px;
+  }
+  &__image {
+    border: 0;
+    box-sizing: border-box;
+    
+  }
 }
 
 .Form {

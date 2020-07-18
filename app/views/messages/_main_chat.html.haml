@@ -12,22 +12,7 @@
       Edit
 
   .MessageField
-    .MessageList
-    .MessageIndex
-
-      .MessageIndex__userName
-        kou
-      .MessageIndex__date
-        2020/06/22(Mon) 07:30:44
-    .message
-      おはよう!
-    .message-index
-      .author
-        kou
-      .date
-        2020/06/24(Wed) 09:06:32
-    .message
-      こんにちは!
+    = render @messages
 
   .Form
     = form_for [@group, @message] do |f|
