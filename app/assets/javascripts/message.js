@@ -17,7 +17,6 @@ $(function(){
             </p>
             <img src=${message.image} >
           </div>
-          
         </div>`
       return html;
     } else {
@@ -61,7 +60,7 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-      $('.Form__send-btn').attr('disabled', false);
+      $('.Form__send-btn').prop('disabled', false);
     });
   })
 });
