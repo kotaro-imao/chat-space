@@ -51,15 +51,16 @@
     color: #ffffff;
     text-decoration: none;
   }
-  &__.list {
-      color: #ffffff;
+
+  &__list {
+    color: #ffffff;
     font-weight: bold;
     text-decoration: none;
-    &__.name {
+    &__name {
       font-size: 15px;
       padding-bottom: 5px;
     }
-    &__.massage {
+    &__massage {
       font-size: 11px;        
       padding-bottom: 40px;
     }

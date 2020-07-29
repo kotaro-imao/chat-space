@@ -8,7 +8,7 @@
           = link_to new_group_path do
             = icon('fas', 'edit')
         %li.TopItem__Icon
-          = link_to edit_user_path(current_user) do
+          = link_to edit_user_path(current_user.id) do
             = icon('fas', 'cog', class: 'icon')
 
   .Group
@@ -20,3 +20,4 @@
             = group.name
           .Group__massage
             = group.show_last_message
+
