@@ -2,7 +2,6 @@ $(function(){
   
   var reloadMessages = function() {
     var last_message_id = $('.message:last').data("message-id");
-    console.log(last_message_id);
     $.ajax({
       url: "api/messages",
       type: 'get',
@@ -22,10 +21,7 @@ $(function(){
     .fail(function() {
       alert('error');
     });
-
-    
   };
-
 
   function buildHTML(message){
     if ( message.image ) {
